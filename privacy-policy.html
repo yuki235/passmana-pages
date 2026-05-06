@@ -87,14 +87,18 @@
     padding: 10px 12px;
     border-bottom: 1px solid var(--border);
     vertical-align: top;
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
-  th { color: var(--accent); font-weight: 600; width: 30%; }
+  th { color: var(--accent); font-weight: 600; width: 30%; white-space: nowrap; }
   code {
     background: #0b0d11;
     padding: 1px 6px;
     border-radius: 4px;
     font-size: 13px;
     color: var(--link);
+    overflow-wrap: anywhere;
+    word-break: break-all;
   }
   a { color: var(--link); }
   footer {
@@ -104,6 +108,33 @@
     margin-top: 40px;
   }
   .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+  @media (max-width: 600px) {
+    .container { padding: 32px 16px 64px; }
+    section.policy { padding: 20px 16px; border-radius: 10px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 19px; }
+    h3 { font-size: 15px; }
+    p, li { font-size: 14px; }
+    table, tbody, tr, th, td { display: block; width: 100%; }
+    table { font-size: 14px; }
+    tr {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    tr:last-child { border-bottom: none; }
+    th {
+      width: auto;
+      white-space: normal;
+      padding: 0 0 4px;
+      border-bottom: none;
+      font-size: 13px;
+    }
+    td {
+      padding: 0;
+      border-bottom: none;
+    }
+  }
 </style>
 </head>
 <body>
